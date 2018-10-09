@@ -1,0 +1,28 @@
+
+<h1 class= "test" >Welcome to {{this.title}}!</h1>
+<p class ="par-before">
+This is the first paragraph
+</p>
+<p class ="par-before">
+  This is the second paragraph
+  </p>
+  <p class ="par-before">
+    This is the third paragraph
+    </p>
+
+<button (click)="ChangeClass()">Click to change color</button>
+    <h1 [ngClass]="changedClass ? 'h1-after' : 'h1-before'" >Welcome to {{this.title}}!</h1>
+
+    <p>Here it follows some user imput</p>
+
+    <input  type="text" [(ngModel)]= "modelInput"  (ngModelChange)="CheckChange($event)"  placeholder="Please insert some input"/>
+
+
+    <p class = "fifth-p" >Example of selection from a list</p>
+
+    <select  (change)= "getChoice($event)">
+      <option disabled selected value> -- select a choice -- </option>
+      <option *ngFor="let choice of choices" [value]="choice.value">{{choice.desc}}</option>
+    </select>
+
+    <app-childformary [name]="nameForChild" (nameToPassToParent) ="nameFromChildHandler($event)" ></app-childformary>
