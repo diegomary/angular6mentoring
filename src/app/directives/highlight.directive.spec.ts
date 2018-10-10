@@ -9,10 +9,10 @@ describe('HighlightDirective', () => {
   });
 
 
-  it('should change the color of the paragraph to yellow', () => {
+  it('should the background color be initially empty', () => {
     let paragraph = document.createElement("p")
     const directive = new HighlightDirective(new ElementRef(paragraph));
-    expect(paragraph.style.backgroundColor).toBe("yellow");
+    expect(paragraph.style.backgroundColor).toBe("");
   });
 
 

@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit, OnDestroy, OnChanges } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy, OnChanges,ElementRef } from '@angular/core';
 import { GenericSvcService } from '../../services/generic-svc.service';
 import {Flower} from '../../interfaces/flower';
 
@@ -16,7 +16,7 @@ export class MaryclientComponent implements OnInit, AfterViewInit, OnDestroy, On
  public flowers:Flower[];
  public isActive:boolean;
 
-  constructor(private productService: GenericSvcService) {
+  constructor(private productService: GenericSvcService,private el: ElementRef) {
     this.isActive = true; // the ngIf shows accordingly
     this.choices= [{desc:"AA", value:"ChoiceAA"},{desc:"BB", value:"ChoiceBB"},{desc:"CC", value:"ChoiceCC"},{desc:"DD", value:"ChoiceDD"}];
     this.changedClass = true;
@@ -31,6 +31,10 @@ export class MaryclientComponent implements OnInit, AfterViewInit, OnDestroy, On
     Array.from(elements).forEach((element:any) => {
       element.className= "par-after"; 
    });
+
+   this.el.nativeElement.querySelector('h1:nth-of-type(2)').textContent="Modify Direct access to the dom";
+
+
   }
   ngOnInit() {
 
