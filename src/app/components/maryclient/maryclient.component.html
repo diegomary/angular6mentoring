@@ -25,4 +25,4 @@ This is the first paragraph
       <option *ngFor="let choice of choices" [value]="choice.value">{{choice.desc}}</option>
     </select>
 
-    <app-childformary [name]="nameForChild" (nameToPassToParent) ="nameFromChildHandler($event)" ></app-childformary>
+    <app-childformary  *ngIf="isActive" [name]="nameForChild" (nameToPassToParent) ="nameFromChildHandler($event)" ></app-childformary>

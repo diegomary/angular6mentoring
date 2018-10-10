@@ -1,9 +1,11 @@
 import { TestBed } from '@angular/core/testing';
-
+import { HttpClientModule } from '@angular/common/http';
 import { GenericSvcService } from './generic-svc.service';
 
 describe('GenericSvcService', () => {
-  beforeEach(() => TestBed.configureTestingModule({}));
+  beforeEach(() => TestBed.configureTestingModule({
+    imports: [HttpClientModule ],
+  }));
 
   it('should be created', () => {
     const service: GenericSvcService = TestBed.get(GenericSvcService);

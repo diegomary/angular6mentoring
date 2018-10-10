@@ -14,9 +14,10 @@ export class MaryclientComponent implements OnInit, AfterViewInit, OnDestroy, On
  public choices:any[];
  public nameForChild:string;
  public flowers:Flower[];
+ public isActive:boolean;
 
   constructor(private productService: GenericSvcService) {
-    
+    this.isActive = true; // the ngIf shows accordingly
     this.choices= [{desc:"AA", value:"ChoiceAA"},{desc:"BB", value:"ChoiceBB"},{desc:"CC", value:"ChoiceCC"},{desc:"DD", value:"ChoiceDD"}];
     this.changedClass = true;
     this.title='maryttsclient';

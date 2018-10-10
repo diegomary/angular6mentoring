@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { MaryclientComponent } from './maryclient.component';
 import { ChildformaryComponent } from './childformary/childformary.component';
-
+import { HttpClientModule } from '@angular/common/http';
 
 describe('MaryclientComponent', () => {
   let component: MaryclientComponent;
@@ -10,7 +10,7 @@ describe('MaryclientComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ FormsModule ],
+      imports: [ FormsModule,HttpClientModule ],
       declarations: [ MaryclientComponent, ChildformaryComponent ]
     })
     .compileComponents();

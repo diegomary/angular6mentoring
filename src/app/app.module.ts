@@ -4,10 +4,11 @@ import { MaryclientComponent } from './components/maryclient/maryclient.componen
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ChildformaryComponent } from './components/maryclient/childformary/childformary.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HighlightDirective } from './directives/highlight.directive';
 
 @NgModule({
   declarations: [   
-    MaryclientComponent, ChildformaryComponent
+    MaryclientComponent, ChildformaryComponent, HighlightDirective
   ],
   imports: [
     BrowserModule,

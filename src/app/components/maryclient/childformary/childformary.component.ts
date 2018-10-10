@@ -10,8 +10,12 @@ export class ChildformaryComponent implements OnInit, AfterViewInit {
   @Output() nameToPassToParent: EventEmitter<string> =   new EventEmitter();
   
 
-  public nameModified:string; 
-  constructor() {}
+  public nameModified:string;
+  public isSpecial:boolean; 
+  constructor() {
+    this.isSpecial=true;
+
+  }
 
 
   public CheckChange(textChanging:string) {
